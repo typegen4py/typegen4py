@@ -1,0 +1,10 @@
+requests  
+six          
+Flask  
+Django 
+Jinja2 
+Numpy  
+pytz   
+MarkupSafe 
+Werkzeug   
+pytest     
