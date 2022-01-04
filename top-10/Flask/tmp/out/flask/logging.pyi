@@ -1,0 +1,9 @@
+from .globals import request as request
+from typing import Any
+
+def wsgi_errors_stream(): ...
+def has_level_handler(logger: Any): ...
+
+default_handler: Any
+
+def create_logger(app: Any): ...

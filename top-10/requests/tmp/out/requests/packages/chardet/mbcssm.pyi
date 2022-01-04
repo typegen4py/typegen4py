@@ -1,0 +1,43 @@
+from .constants import eError as eError, eItsMe as eItsMe, eStart as eStart
+from typing import Any
+
+BIG5_cls: Any
+BIG5_st: Any
+Big5CharLenTable: Any
+Big5SMModel: Any
+CP949_cls: Any
+CP949_st: Any
+CP949CharLenTable: Any
+CP949SMModel: Any
+EUCJP_cls: Any
+EUCJP_st: Any
+EUCJPCharLenTable: Any
+EUCJPSMModel: Any
+EUCKR_cls: Any
+EUCKR_st: Any
+EUCKRCharLenTable: Any
+EUCKRSMModel: Any
+EUCTW_cls: Any
+EUCTW_st: Any
+EUCTWCharLenTable: Any
+EUCTWSMModel: Any
+GB2312_cls: Any
+GB2312_st: Any
+GB2312CharLenTable: Any
+GB2312SMModel: Any
+SJIS_cls: Any
+SJIS_st: Any
+SJISCharLenTable: Any
+SJISSMModel: Any
+UCS2BE_cls: Any
+UCS2BE_st: Any
+UCS2BECharLenTable: Any
+UCS2BESMModel: Any
+UCS2LE_cls: Any
+UCS2LE_st: Any
+UCS2LECharLenTable: Any
+UCS2LESMModel: Any
+UTF8_cls: Any
+UTF8_st: Any
+UTF8CharLenTable: Any
+UTF8SMModel: Any

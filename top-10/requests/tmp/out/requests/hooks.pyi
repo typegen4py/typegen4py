@@ -1,0 +1,6 @@
+from typing import Any
+
+HOOKS: Any
+
+def default_hooks(): ...
+def dispatch_hook(key: Any, hooks: Any, hook_data: Any, **kwargs: Any): ...

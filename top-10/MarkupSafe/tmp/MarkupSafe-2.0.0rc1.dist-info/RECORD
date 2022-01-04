@@ -1,0 +1,10 @@
+MarkupSafe-2.0.0rc1.dist-info/LICENSE.rst,sha256=SJqOEQhQntmKN7uYPhHg9-HTHwvY-Zp5yESOf_N9B-o,1475
+MarkupSafe-2.0.0rc1.dist-info/METADATA,sha256=k2nbXhOoOuhKOtw2FDIzTZM9XGbuSPMYVUCEKxJC-18,2938
+MarkupSafe-2.0.0rc1.dist-info/top_level.txt,sha256=qy0Plje5IJuvsCBjejJyhDCjEAdcDLK_2agVcex8Z6U,11
+MarkupSafe-2.0.0rc1.dist-info/WHEEL,sha256=IkZiJFiZiRavDHfaLV1hdVPFYe1HJNLQ8dnz1DVQgHk,109
+MarkupSafe-2.0.0rc1.dist-info/RECORD,,
+markupsafe/_speedups.cpython-36m-x86_64-linux-gnu.so,sha256=0X6Ni-uG-URPzTS3uIJ3alV1VYEhfdM55xm17ITZQCc,51904
+markupsafe/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+markupsafe/_speedups.c,sha256=-j2IIFJe_WzyfhQjdbEhoT_slZhzZqrLaqkqV1wTKgo,7397
+markupsafe/_native.py,sha256=EDDmPjGToQhoteezw3jh12AJ_eOseJ58aA0Trh_ISnY,1983
+markupsafe/__init__.py,sha256=vApRZqnzqWxwBvJeb1YOxw1tMDMALmNUGtYRbDjJOxo,8721

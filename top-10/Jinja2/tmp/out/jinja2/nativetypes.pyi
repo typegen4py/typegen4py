@@ -1,0 +1,16 @@
+from . import nodes as nodes
+from ._compat import text_type as text_type
+from .compiler import CodeGenerator as CodeGenerator, has_safe_repr as has_safe_repr
+from .environment import Environment as Environment, Template as Template
+from typing import Any
+
+def native_concat(nodes: Any): ...
+
+class NativeCodeGenerator(CodeGenerator): ...
+
+class NativeEnvironment(Environment):
+    code_generator_class: Any = ...
+
+class NativeTemplate(Template):
+    environment_class: Any = ...
+    def render(self, *args: Any, **kwargs: Any): ...

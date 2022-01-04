@@ -1,0 +1,29 @@
+import types
+from _pytest import outcomes as outcomes
+from _pytest._code import ExceptionInfo as ExceptionInfo
+from _pytest.capture import CaptureManager as CaptureManager
+from _pytest.config import Config as Config, ConftestImportFailure as ConftestImportFailure, PytestPluginManager as PytestPluginManager, hookimpl as hookimpl
+from _pytest.config.argparsing import Parser as Parser
+from _pytest.config.exceptions import UsageError as UsageError
+from _pytest.nodes import Node as Node
+from _pytest.reports import BaseReport as BaseReport
+from _pytest.runner import CallInfo as CallInfo
+from typing import Any, Generator
+
+def pytest_addoption(parser: Parser) -> None: ...
+def pytest_configure(config: Config) -> None: ...
+
+class pytestPDB:
+    @classmethod
+    def set_trace(cls: Any, *args: Any, **kwargs: Any) -> None: ...
+
+class PdbInvoke:
+    def pytest_exception_interact(self, node: Node, call: CallInfo[Any], report: BaseReport) -> None: ...
+    def pytest_internalerror(self, excinfo: ExceptionInfo[BaseException]) -> None: ...
+
+class PdbTrace:
+    def pytest_pyfunc_call(self, pyfuncitem: Any) -> Generator[None, None, None]: ...
+
+def wrap_pytest_function_for_tracing(pyfuncitem: Any) -> None: ...
+def maybe_wrap_pytest_function_for_tracing(pyfuncitem: Any) -> None: ...
+def post_mortem(t: types.TracebackType) -> None: ...
