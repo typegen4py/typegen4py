@@ -591,8 +591,8 @@ class AutoTyper:
                         #if shed_type_str is None:
                         #    continue
                     #    if check_with_gt(shed_type_str, )
-                        if pytype_type_str != shed_type_str and shed_type_str not in pytype_type_str:
-                            print(pytype_type_str, fun_name, "No--", "pytype:", pytype_type_str, "shed:", shed_type_str)
+                        #if pytype_type_str != shed_type_str and shed_type_str not in pytype_type_str:
+                        #    print(pytype_type_str, fun_name, "No--", "pytype:", pytype_type_str, "shed:", shed_type_str)
                         #else:
                         #    print("Yes")
             else:
@@ -662,7 +662,8 @@ class AutoTyper:
                             n_same += 1    
                         else:
                             n_not_same += 1
-                            print(fun_name, pyi_file_path, shed_type_str, pred_type)
+                            # this is debugging information
+                            #print(fun_name, pyi_file_path, shed_type_str, pred_type)
                     #else:
                     #    shed_type_str = format_type_annot(shed_type)
                         
@@ -675,13 +676,12 @@ class AutoTyper:
                 #print("testing")
                 #print(pyi_file_path, leaf_node.prefix)
             #continue
-        print("Pytype only: {},   identical: {}, non-identical: {}, common {}".format(n_pytype_only,n_same, n_not_same, n_common_total))
-        #print("Common{}/{}, {}".format())
-        #print(n_pytype)
-        #print("comparsion results:", "common", n_common_total, "same", n_same, "any", n_any, "other", n_common_total-n_any-n_same)
-        
+        eval_str = 'Pytype only: {},   identical: {}, non-identical: {}, common {}".format(n_pytype_only,n_same, n_not_same, n_common_total)'
+        return eval_str
+     
 
 def get_source_folder(base_dir, folders):
+    # this function should be replace by reading the entry point from whl file.
     if "_pytest" in folders:
         return "_pytest"
     for foder_name in folders:
@@ -693,6 +693,8 @@ def get_source_folder(base_dir, folders):
         if foder_name.find(".mypy") >=0:
             continue
         if foder_name.find("out") >=0:
+            continue
+        if foder_name.find(".libs") >=0:
             continue
         if os.path.isdir(tmp_path) and foder_name.find(".dist-info") == -1:
             return foder_name
@@ -708,6 +710,7 @@ def process_single_lib(data_dir):
         print('Wrong!!')
         return
     ep = get_source_folder(data_dir, os.listdir(data_dir)) 
+    
     if ep is None:
         return 
     if ep.endswith(".py"):
@@ -726,9 +729,10 @@ def process_single_lib(data_dir):
     auto_typer.step3()
     auto_typer.step4()
     #auto_typer.query_typeshed(ep)
-    auto_typer.query_pytype(ep)
+    eval_str = auto_typer.query_pytype(ep)
     #auto_typer.cmp_pytype_shed()
-    #auto_typer.stat(l_name=m_name)
+    print("Compared with pytype:", eval_str)
+    auto_typer.stat(l_name=m_name)
     #auto_typer.eval()
 
 

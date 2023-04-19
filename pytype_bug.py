@@ -12,5 +12,4 @@ class A:
             yield i
 
     def test_bool(self):
-
         return True
