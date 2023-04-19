@@ -16,6 +16,13 @@
 ## To use this tool
 `python run.py gen  lib-data-dir ` where lib-data-dir is the location of your uncompressed wheel file folder. Please note the input of typegen4py is supposed to be uncompressed wheel file.
 
+For instance you can use 
+
+`python run.py gen top-10/requests/tmp`
+
+where tmp contain the uncompressed folder of request wheel file. You can test this command after having uncompressed top10.zip. 
+
+
 ## To obtain RQ2 results
  After downloading top-10 library sources, you can run our tool with gen mode. Specifying the root folder of library source as the input for gen mode, our tool will produce the results in the paper.
 
