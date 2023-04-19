@@ -676,7 +676,7 @@ class AutoTyper:
                 #print("testing")
                 #print(pyi_file_path, leaf_node.prefix)
             #continue
-        eval_str = 'Pytype only: {},   identical: {}, non-identical: {}, common {}".format(n_pytype_only,n_same, n_not_same, n_common_total)'
+        eval_str = "Pytype only: {},   identical: {}, non-identical: {}, common {}".format(n_pytype_only,n_same, n_not_same, n_common_total)
         return eval_str
      
 
